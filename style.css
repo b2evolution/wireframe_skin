@@ -1,0 +1,232 @@
+/* WireFrame designed by the Skin Faktory - http://skinfaktory.com/ */
+
+/* Wrap whole skin area (excluding evobar): */
+div#skin_wrapper {
+	background-color: #eee; /* skin margins background */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:14px;
+}
+
+/* Cut page into 3 horizontal stripes: */
+div#page_top {
+	width: 986px;	/* modern browsers know how to resize pixels */
+	margin: 0 auto;	/* horinzontal centering */
+	padding: 10px 0 3px;
+}
+div#page_wrapper {
+	clear:both;
+	width: 988px;	/* 1 px for borders -> 990 */
+	margin: 0 auto;	/* horinzontal centering */
+	background-color: #e7e7e7;
+	border: 1px solid #ccc;
+}
+div#page_footer {
+	font-size:84%;
+	width: 986px;
+	margin: 0 auto;
+	padding:3px 0 10px;
+	color: #999;
+}
+
+/* Cut middle stripe into several areas: */
+div#area_header {
+	padding: 5px;
+	background-color:#d6d6d6;
+	border-bottom: 1px solid #ccc;
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+div#area_menu {
+	padding: 2px 5px;
+	background-color:#ddd;
+	border-bottom: 1px solid #ccc;
+}
+div#columns {
+	overflow:hidden;	/* This will cover the padding-minus-margin trick below */
+}
+div#area_main {
+	clear:both;
+	width: 570px;
+	position: relative;
+	left: 208px;	/* push to center */
+	position:relative;
+	float: left;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	background-color:#eee;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	/* The following padding minus margin trick will blow up when using #comments to position on comments for example */
+	/*padding-bottom: 1000px;	/* make sure the center col goes lower than the sidebars */
+	/*margin-bottom: -1000px;	/* padding minus margin trick so that the browser displays the padding as overflow */
+}
+div#area_leftcol {
+	width: 198px;
+	position:relative;
+	left:-572px;	/* push back to the left */
+	padding: 5px;
+	float: left;
+	border-right: 1px solid #ccc; /* this border will be overlapped by div #area main */
+}
+div#area_rightcol {
+	width: 198px;
+	padding: 5px 0 5px 5px; /* no right margin, to compensate for the 5 pixels removed in width */
+	float: left;
+	position: relative;
+	left: -2px;
+	border-left: 1px solid #ccc; /* this border will be overlapped by div #area main */
+}
+div#area_footer {
+	clear:both;
+	background-color:#ddd;
+	border-top: 1px solid #ccc;
+}
+
+/* General styles: */
+a {
+	text-decoration:none;
+	color: #069;
+}
+a:hover {
+	text-decoration:underline;
+}
+
+/* Page top menu (blog swithcer) */
+div#page_top ul {
+	float:right;
+	list-style-type:none;
+	margin:0 0 4px 0;
+	padding:0;
+}
+div#page_top li {
+	display:inline;
+	margin:0;
+	padding:0 0 0 10px;
+}
+div#page_top a {
+	color: #666;
+	text-decoration:underline;
+}
+div#page_top a:hover {
+	color: #069;
+}
+
+/* Header area */
+div#area_header h1 {
+	margin: 5px 0;
+}
+
+/* Menu under header */
+div#area_menu ul {
+	float:left;
+	list-style-type:none;
+	margin: 2px 0 0 0;
+	padding:0;
+}
+div#area_menu li {
+	display:inline;
+	margin:0;
+	padding:0 16px 0 0;
+	font-weight:bold;
+}
+
+/* Main area */
+div.featured_post {
+	border: none;
+	border-bottom: 1px solid #ccc;
+	margin: 0;
+}
+div.content_navigation_top {
+	border-bottom: 1px solid #ccc;
+	padding: 1ex;
+	text-align: center;
+}
+div#content {
+	border-bottom: 1px solid #ccc;
+	background-color:#fff;
+	padding: 10px;
+	/* min-height: 1000px; */
+}
+div.content_navigation_bottom {
+	padding: 1ex;
+	text-align: center;
+}
+table.prevnext_post {
+	width: 100%;
+}
+
+/* Item block */
+div.item_block {
+	margin: 0 0 30px 0;
+}
+div.item_block h2,
+div.featured_post h2 {
+	margin: 4px 0;
+}
+div.item_header,
+div.item_footer {
+	color: #999;
+	font-size:12px;
+}
+div.item_header a,
+div.item_footer a {
+	color: #999;
+	text-decoration:underline;
+}
+div.item_header a:hover,
+div.item_footer a:hover {
+	color: #069;
+}
+div.item_actions {
+	margin: 4px 0;
+	font-weight:bold;
+}
+
+/* Sidebars */
+div.sidebar {
+	/* background-color:#CC3399;*/
+	overflow:hidden;
+	font-size:13px;
+}
+div.sidebar_item {
+	margin: 20px 0;
+}
+div.sidebar h3 {
+	margin: 1em 0 4px 0;
+}
+div.sidebar ul {
+	margin: 4px 0 4px 16px;
+	padding:0;
+}
+div.sidebar ul ul {
+	margin: 0 0 0 16px;
+	padding:0;
+}
+div.sidebar li {
+	margin: 0;
+	padding: 0;
+}
+
+/* Page footer/credits */
+div#page_footer a {
+	color: #999;
+	text-decoration:none;
+}
+div#page_footer a.contact_link {
+	text-decoration:underline;
+}
+
+/* Search results */
+div.searchresults_form {
+	border: 1px solid #ccc;
+	background-color: #eee;
+	padding: 1ex;
+}
+div.searchresults_form h2 {
+	margin: 0;
+}
+h3.searchresult_title {
+	margin: 1em 0 1px 0;
+}
+div.searchresult_images {
+	float: left;
+	margin: 2px 4px 2px 0;
+}
